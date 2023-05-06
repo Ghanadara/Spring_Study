@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bootCampAlarm</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+    <link th:href="@{/css/home.css}" rel="stylesheet">
+
+
+</head>
+<body>
+<section>
+    <h1 class="service-name">로그인 서비스</h1>
+    <div class="form-wrapper">
+        <form action="/api/v1/signin" method="POST" class="form checkboxes-form">
+
+            <input id="username" type="email">
+            <input id="password" type="password">
+        </form>
+        <div>
+            <input id="signin" type="button" onclick="signin()" value="로그인" />
+            <input id="signup" type="button" onclick="signup()" value="회원가입" />
+            <input id="findpw" type="button" onclick="findpw()" value="비밀번호찾기" />
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script th:src="@{/js/home.js}"></script>
+</body>
+</html>
